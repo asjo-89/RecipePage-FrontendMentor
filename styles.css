@@ -43,6 +43,7 @@ h3 {
     font-family: "Young serif", sans-serif;
     font-weight: 600;
     font-size: 1.3rem;
+    color: var(--rose-800);
 }
 
 .brown-bold {
