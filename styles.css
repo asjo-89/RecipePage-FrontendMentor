@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --rose-800: #7A284E;
+    --rose-50: #FFF7FB;
+
+    --stone-900: #312E2C;
+    --stone-600: #5F564D;
+    --stone-150: #E3DDD7;
+    --stone-100: #F3E5D7;
+
+    --brown-800: #854632;
+
+    --white: #FFFFFF;
+}
+
+body, html {
+  font-family: "Outfit", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1rem;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: var(--stone-600);
+}
+
+h1 {
+    font-family: "Young serif", sans-serif;
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-family: "Young serif", sans-serif;
+    font-size: 1.8rem;
+    color: var(--brown-800);
+}
+
+h3 {
+    font-family: "Young serif", sans-serif;
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+
+.brown-bold {
+    font-weight: 800;
+    color: var(--brown-800);
+}
+
+.stone-bold {
+    font-weight: 800;
+}
