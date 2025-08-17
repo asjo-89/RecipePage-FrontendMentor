@@ -143,7 +143,7 @@ ol {
     min-width: 376px;
     background-color: var(--white);
     padding: min(2.5rem, 5%);
-    margin-block: min(2rem, 8%);
+    margin-block: min(7rem, 8%);
     border-radius: 1.5em;    
 
     @media screen and (max-width: 576px) {
