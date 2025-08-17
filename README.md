@@ -24,8 +24,8 @@ You can use any tools you like to help you complete the challenge. So if you've 
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [[Add solution URL here](https://github.com/asjo-89/RecipePage-FrontendMentor.git)]
+- Live Site URL: [[Add live site URL here](https://asjo-89.github.io/RecipePage-FrontendMentor/)]
 
 ## My process
 - I started to add the basic elements in the index.html to get everything in the right order. 
