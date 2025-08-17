@@ -128,7 +128,7 @@ ol {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: min(2rem, 8%);
+    padding: min(8rem, 8%);
 
     @media screen and (max-width: 576px) {
         padding: 0;
