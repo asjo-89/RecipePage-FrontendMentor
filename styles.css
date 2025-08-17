@@ -51,6 +51,42 @@ h3 {
     color: var(--rose-800);
 }
 
+ul {
+    width: 100%;
+    list-style: none;
+    list-style-position: inside;
+    
+    li {
+        line-height: 2rem;
+        position: relative;
+        margin-left: 8px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    & span {
+        margin-right: .3rem;
+    }
+
+    & li::before {
+        content: "";
+        display: inline-block;
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        margin-right: 2rem;
+    }
+
+    .brown::before {
+        background-color: var(--brown-800);
+    }
+
+    .purple::before {
+        background-color: var(--rose-800);
+    }
+}
+
 .brown-bold {
     font-weight: 800;
     color: var(--brown-800);
@@ -79,7 +115,7 @@ h3 {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    gap: 2.5rem;
+    gap: 2rem;
     
     .image {
         width: 100%;
@@ -87,11 +123,9 @@ h3 {
         border-radius: .8em;
     }
 
-    .prep-container {
+    .list-container {
         width: 100%;
         height: fit-content;
-        background-color: var(--rose-50);
-        padding: 1.5rem;
         display: flex;
         flex-direction: column;
         justify-content: inherit;
@@ -100,12 +134,9 @@ h3 {
         border-radius: .8em;
     }
 
-    ul {
-        width: 100%;
-        list-style: none;
-
-        li {
-            line-height: 2rem;
-        }
+    .preparation {
+        background-color: var(--rose-50);
+        padding: 1.5rem;
     }
+    
 }
