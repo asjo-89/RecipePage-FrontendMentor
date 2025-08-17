@@ -46,18 +46,19 @@ h1 {
 
 h2 {
     font-family: "Young serif", sans-serif;
-    font-size: 1.8rem;
-    color: var(--brown-800);
-    line-height: 100%;
-}
-
-h3 {
-    font-family: "Young serif", sans-serif;
     font-weight: 600;
     font-size: 1.3rem;
     color: var(--rose-800);
     line-height: 100%;
 }
+
+h3 {
+    font-family: "Young serif", sans-serif;
+    font-size: 1.8rem;
+    color: var(--brown-800);
+    line-height: 100%;
+}
+
 
 ul, ol {
     width: 100%;
@@ -126,9 +127,10 @@ ol {
 
 .wrapper {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: min(8rem, 8%);
+    padding: min(1rem, 8%);
 
     @media screen and (max-width: 576px) {
         padding: 0;
@@ -141,12 +143,13 @@ ol {
     min-width: 376px;
     background-color: var(--white);
     padding: min(2.5rem, 5%);
-    border-radius: 1.5em;
-    
+    margin-block: min(2rem, 8%);
+    border-radius: 1.5em;    
 
     @media screen and (max-width: 576px) {
         border-radius: 0;
         padding: 0;
+        margin: 0;
     }
 
     .content {
@@ -222,7 +225,6 @@ ol {
 }
 
 .attribution {
-    padding-bottom: 1rem;
     font-size: 11px; text-align: center; 
     & a { 
         color: var(--rose-800); 
