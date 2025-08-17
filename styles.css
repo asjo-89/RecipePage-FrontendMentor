@@ -22,6 +22,7 @@ body, html {
     width: 100dvw;
     height: 100dvh;
     max-width: 100%;
+    min-width: 375px;
     background-color: var(--stone-100);
     font-family: "Outfit", sans-serif;
     font-weight: 400;
@@ -30,18 +31,24 @@ body, html {
     line-height: 100%;
     letter-spacing: 0%;
     color: var(--stone-600);  
+
+    @media screen and (max-width: 576px) {
+        background-color: var(--white);
+    }
 }
 
 h1 {
     font-family: "Young serif", sans-serif;
     font-size: 2.5rem;
     color: var(--stone-900);
+    line-height: 100%;
 }
 
 h2 {
     font-family: "Young serif", sans-serif;
     font-size: 1.8rem;
     color: var(--brown-800);
+    line-height: 100%;
 }
 
 h3 {
@@ -49,26 +56,27 @@ h3 {
     font-weight: 600;
     font-size: 1.3rem;
     color: var(--rose-800);
+    line-height: 100%;
 }
 
-ul {
+ul, ol {
     width: 100%;
-    list-style: none;
-    list-style-position: inside;
-    
+
     li {
         line-height: 2rem;
-        position: relative;
         margin-left: 8px;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
+        display: grid;
+        grid-template-columns: 2rem 1fr;
+        align-items: start;
+        
+        & span {
+            margin-right: .3rem;
+        }
     }
-
-    & span {
-        margin-right: .3rem;
-    }
-
+}
+ul {
+    list-style: none;
+    
     & li::before {
         content: "";
         display: inline-block;
@@ -76,15 +84,35 @@ ul {
         height: 4px;
         border-radius: 50%;
         margin-right: 2rem;
+        margin-top: .9rem;
     }
+}
 
-    .brown::before {
-        background-color: var(--brown-800);
-    }
+ol {
+    list-style: none;
+    counter-reset: instructions;
+    
+    li {
+        margin-bottom: 1rem;
+        counter-increment: instructions;
+        line-height: 150%;
 
-    .purple::before {
-        background-color: var(--rose-800);
+        &::before {
+            display: inline-block;
+            content: counter(instructions) ".";
+            color: var(--brown-800);
+            font-weight: bold;
+            margin-right: 2rem;
+        }
     }
+}
+
+.brown-dot::before {
+    background-color: var(--brown-800);
+}
+
+.purple-dot::before {
+    background-color: var(--rose-800);
 }
 
 .brown-bold {
@@ -101,26 +129,55 @@ ul {
     justify-content: center;
     align-items: center;
     padding: min(2rem, 8%);
-    overflow: auto;
+
+    @media screen and (max-width: 576px) {
+        padding: 0;
+    }
 }
 
 .container {
     width: 736px;
     max-width: 100%;
-    min-width: 375px;
+    min-width: 376px;
     background-color: var(--white);
     padding: min(2.5rem, 5%);
     border-radius: 1.5em;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: 2rem;
+    
+
+    @media screen and (max-width: 576px) {
+        border-radius: 0;
+        padding: 0;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 2rem;
+        padding-top: 1rem;
+
+        @media screen and (max-width: 576px) {
+            padding: min(2rem, 5%);
+        }
+    }
     
     .image {
         width: 100%;
         height: 300px;
         border-radius: .8em;
+        object-fit: cover;
+
+        @media screen and (max-width: 576px) {
+            border-radius: 0;
+            height: 171px;
+        }
+    }
+
+    .stroke {
+        width: 100%;
+        height: 1px;
+        background-color: var(--stone-150);
     }
 
     .list-container {
@@ -138,5 +195,38 @@ ul {
         background-color: var(--rose-50);
         padding: 1.5rem;
     }
-    
+
+    .table {
+        width: 100%;
+        border-collapse: collapse;
+        text-align: left;
+                       
+
+        tr td{
+            padding-block: 1rem;
+            border-bottom: 1px solid var(--stone-150);
+        }
+
+        & td:first-child {
+            padding-left: 2rem;
+        }
+
+        & td:last-child {
+            width: 50%;
+        }
+
+        & tr:last-child td {
+            border: none;
+        }
+    }
+}
+
+.attribution {
+    padding-bottom: 1rem;
+    font-size: 11px; text-align: center; 
+    & a { 
+        color: var(--rose-800); 
+        font-weight: 600;
+        text-decoration: none;
+    }
 }
